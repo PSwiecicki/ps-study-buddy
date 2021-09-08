@@ -14,11 +14,17 @@ const Wrapper = styled.div`
   }
 `;
 
-const FormField = ({ label, name, id, type = 'text' }) => {
+const FormField = ({ label, name, id, value, onChange, type = 'text' }) => {
   return (
     <Wrapper>
       <Label htmlFor={id}>{label}</Label>
-      <Input id={id} name={name} type={type} />
+      <Input
+        id={id}
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+      />
     </Wrapper>
   );
 };
